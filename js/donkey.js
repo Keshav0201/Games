@@ -139,6 +139,7 @@ async function startGame(players) {
       players[j].cards.push(shuffled[i++]);
     }
   }
+
   let firstTurn = findFirstPlayer(players);
   await updateDoc(gameRef, {
     players,
@@ -406,10 +407,10 @@ function render(game) {
   });
 }
 // 🔁 LISTEN
-onSnapshot(gameRef, (snap) => {
+onSnapshot(gameRef, async (snap) => {
   let game = snap.data();
   if (!game) return;
-
+  
   render(game);
 });
 
