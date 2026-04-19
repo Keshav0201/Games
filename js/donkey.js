@@ -120,6 +120,7 @@ async function joinPlayer() {
 
   snap = await getDoc(gameRef);
   game = snap.data();
+  players = game.players;
 
   // 🚀 start
   if (players.length === game.maxPlayers && !game.started) {
@@ -151,6 +152,7 @@ async function startGame(players) {
     maxPlayer: firstTurn,
     isFirstTurn: true,
   });
+
 }
 
 function findFirstPlayer(players) {
