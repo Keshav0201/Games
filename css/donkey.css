@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: radial-gradient(circle, #1e3c72, #000);
+  color: white;
+  text-align: center;
+}
+
+.game-container {
+  padding: 20px;
+}
+
+.turn {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* players */
+.players {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.player {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  width: 120px;
+  transition: 0.2s;
+}
+
+/* center */
+.center-area {
+  margin: 40px 0;
+}
+
+.discard-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.discard {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* cards */
+.cards {
+  margin-top: 20px;
+}
+
+.card {
+  width: 50px;
+  height: 75px;
+  background: white;
+  border-radius: 6px;
+  margin: 4px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  transition: 0.2s;
+}
+
+.card.small {
+  width: 40px;
+  height: 60px;
+  margin: 3px;
+  opacity: 0.9;
+}
+
+.top, .bottom {
+  font-size: 11px;
+}
+
+.center {
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card:hover {
+  transform: translateY(-px);
+  background: #ffd369;
+}
+
+/* disable card */
+.card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
+
+.top {
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  font-size: 14px;
+}
+
+
+.bottom {
+  position: absolute;
+  bottom: 5px;
+  right: 6px;
+  font-size: 14px;
+  transform: rotate(180deg);
+}
+
+
+#restartBtn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #00c6ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#restartBtn:hover {
+  background: #0096c7;
+}

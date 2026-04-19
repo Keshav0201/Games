@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game</title>
+    <link rel="stylesheet" href="../css/donkey.css" />
+  </head>
+
+  <body>
+    <div class="game-container">
+      <!-- TURN -->
+      <div id="turn" class="turn">Turn: ...</div>
+      <button id="restartBtn" style="display: none" onclick="restartGame()">
+        🔄 Restart Game
+      </button>
+
+      <!-- PLAYERS -->
+      <div id="players" class="players"></div>
+
+      <!-- CENTER AREA -->
+      <div class="center-area">
+        <div class="discard-box">
+          <h3>Discard</h3>
+          <div id="discard" class="discard"></div>
+        </div>
+      </div>
+
+      <!-- YOUR CARDS -->
+      <div>
+        <h3>Your Cards</h3>
+        <div id="myCards" class="cards"></div>
+      </div>
+    </div>
+
+    <script type="module" src="../js/donkey.js"></script>
+  </body>
+</html>
