@@ -12,6 +12,9 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/fi
 // 🔍 get params
 const urlParams = new URLSearchParams(window.location.search);
 const gameId = urlParams.get("gameId");
+document.title=gameId;
+const gameIdDiv = document.getElementById("gameId");
+gameIdDiv.innerText = `Game ID: ${gameId}`
 const playerId = Number(urlParams.get("playerId"));
 const playerName = urlParams.get("name");
 let currentUser = null;

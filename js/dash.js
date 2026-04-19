@@ -60,7 +60,7 @@ logoutBtn.addEventListener("click", () => {
     return;
   }
   signOut(auth)
-    .then(() => (window.location.href = "index.html"))
+    .then(() => (window.location.href = "../index.html"))
     .catch((error) => console.error("Logout failed:", error));
 });
 
