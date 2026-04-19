@@ -236,7 +236,7 @@ async function handleDonkeyJoinGame(e) {
 
   const game = snap.data();
 
-  if (game.currentNoOfPlayers >= game.maxPlayers) {
+  if (game.players.length >= game.maxPlayers) {
     alert("Game full");
     return;
   }

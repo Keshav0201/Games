@@ -118,6 +118,9 @@ async function joinPlayer() {
     });
   }
 
+  snap = await getDoc(gameRef);
+  game = snap.data();
+
   // 🚀 start
   if (players.length === game.maxPlayers && !game.started) {
     startGame(players);
