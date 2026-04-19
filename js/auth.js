@@ -30,6 +30,12 @@ const googleSignInBtn = document.getElementById("google-signin-btn");
 // --- Google Provider ---
 const provider = new GoogleAuthProvider();
 
+if (auth.currentUser) {
+  window.location.href = "dash.html";
+} else {
+ console.log("Not logged in");
+}
+
 // 🔥 GOOGLE SIGN IN
 googleSignInBtn.addEventListener("click", async () => {
   try {
